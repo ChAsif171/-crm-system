@@ -22,4 +22,9 @@ export default {
         AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN,
         FROM_NUMBER: process.env.TWILIO_FROM_NUMBER,
     },
+    STRIPE: {
+        SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+        PAYMENT_URL: process.env.STRIPE_PAYMENT_URL,
+        STRIPE_ENDPOINT_SECRET: process.env.STRIPE_ENDPOINT_SECRET
+    },
 };
