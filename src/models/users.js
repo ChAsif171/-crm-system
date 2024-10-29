@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
-import { PHONE_NUMBER_REGEX, EMAIL_REGEX, NAME_REGEX } from '../../constants/regex.js';
+import { PHONE_NUMBER_REGEX, EMAIL_REGEX, NAME_REGEX } from '../constants/regex.js';
 import passwordValidation from '../utils/passwordValidation.js';
 
 const Schema = new mongoose.Schema({

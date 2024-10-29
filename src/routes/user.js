@@ -3,7 +3,7 @@ import User from '../models/users.js';
 import authMiddleware from '../middleware/authMiddleware.js';
 import validateUserInputs from '../middleware/validateUserInputs.js';
 import VerifyOtpMiddleware from '../middleware/verifyOtpMiddleWare.js';
-import { EmailSchema, OtpSchema, PasswordConfirmPasswordSchema, UserSignupSchema, SignInSchema, PhoneSchema } from '../../constants/usersJoiSchemas.js';
+import { EmailSchema, OtpSchema, PasswordConfirmPasswordSchema, UserSignupSchema, SignInSchema, PhoneSchema } from '../constants/usersJoiSchemas.js';
 import { signup, verifyEmail, verifyPhoneNumber, login, verifySignin } from '../controllers/auth/index.js';
 
 const router = express.Router();

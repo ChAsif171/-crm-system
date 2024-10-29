@@ -3,7 +3,7 @@ import User from '../models/users.js';
 import AdminSignin from '../models/adminSignin.js';
 import authMiddleware from '../middleware/authMiddleware.js';
 import validateUserInputs from '../middleware/validateUserInputs.js';
-import { userIdSchema } from '../../constants/usersJoiSchemas.js';
+import { userIdSchema } from '../constants/usersJoiSchemas.js';
 import { stripePaymentSuccess, getSubscriptions } from "../controllers/payment/index.js";
 import { checkPermission } from "../controllers/permissions/index.js"
 import { Permissions } from "../constants/index.js";

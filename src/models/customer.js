@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { PHONE_NUMBER_REGEX, EMAIL_REGEX, NAME_REGEX } from '../../constants/regex.js';
+import { PHONE_NUMBER_REGEX, EMAIL_REGEX, NAME_REGEX } from '../constants/regex.js';
 import passwordValidation from '../utils/passwordValidation.js';
 
 const customerSchema = new mongoose.Schema({
