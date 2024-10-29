@@ -79,6 +79,10 @@ const Schema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    isSubscribed: {
+        type: Boolean,
+        default: false,
+    },
     tokenVersion: {
         type: Number,
         default: 0,
