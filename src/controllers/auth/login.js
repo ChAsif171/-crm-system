@@ -9,10 +9,10 @@ async function login(req, res, next) {
     try {
         const { email, password } = req.body;
         const userExists = await Users.findOne({ email: email.toLowerCase() });
-        if (!userExists) throw new ApiError('Invalid Credentials', 400, 'incorrect_email_or_password', true);
+        if (!userExists) throw new ApiError('Invalid Credentials', 400, 'email or password is incorrect', true);
         const userVerified = await userExists.bcryptComparePassword(password);
         if (!userVerified) {
-            throw new ApiError('Invalid Credentials', 400, 'incorrect_email_or_password', true);
+            throw new ApiError('Invalid Credentials', 400, 'email or password is incorrect', true);
         }
         await SendOtpWithNotification({ email, phoneNumber: userExists.phoneNumber, otpType: OtpTypes.SignIn, onMobile: false, onEmail: true, resendOtp: false, templates: null });
         const jwtPayload = {
