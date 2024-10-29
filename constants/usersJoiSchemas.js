@@ -205,6 +205,15 @@ const SignInSchema = Joi.object().options({ abortEarly: false }).keys({
             'string.empty': 'password empty',
         }),
 }).unknown(false);
+const userIdSchema = Joi.object().options({ abortEarly: false }).keys({
+    userId: Joi.string().trim()
+        .required()
+        .messages({
+            'any.required': 'userId is required',
+            'string.trim': 'userId is trim', // seems to be unnecessary
+            'string.empty': 'userId is not empty',
+        }),
+})
 
 export {
     UserSignupSchema,
@@ -213,4 +222,5 @@ export {
     PasswordConfirmPasswordSchema,
     SignInSchema,
     PhoneSchema,
+    userIdSchema,
 };
